@@ -77,9 +77,9 @@ static int do_open(const char *path, struct fuse_file_info *fi) {
 
 static int do_read(const char *path, char *buffer, size_t size, off_t offset, struct fuse_file_info *fi) {
 	if (theWad->isContent(path)) {
-		char* fucker = new char[theWad->getSize(path)];
-		int retval = theWad->getContents(path, fucker, size, offset);
-		memcpy(buffer, fucker, retval);
+		char* ducker = new char[theWad->getSize(path)];
+		int retval = theWad->getContents(path, ducker, size, offset);
+		memcpy(buffer, ducker, retval);
 		return retval;
 	}
 	else {
